@@ -13,6 +13,8 @@
 
 - DONE: Documentation scaffold created (`LLM_START_HERE.md`, docs/, docs/llm/).
 - DONE: README updated with documentation map and repaired anchors/headings.
+- DONE: Analyst ordering and related documentation/env updates synchronized.
+- DONE: Local dev tooling confirmed (Poetry 2.2.1 installed, dependencies bootstrapped; Node 19.6.0 triggers Vite warning to upgrade to >=20).
 - TODO: Workflow-specific documentation still outstanding.
 - TODO: Testing guidance for critical agents not yet documented.
 

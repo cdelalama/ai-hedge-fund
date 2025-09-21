@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\cdela\\Documents\\GitHub\\ai-hedge-fund\")",
+      "Bash(dir \"C:\\Users\\cdela\\Documents\\GitHub\\ai-hedge-fund\\docker\")",
+      "Bash(grep:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

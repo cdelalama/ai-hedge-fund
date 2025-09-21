@@ -10,7 +10,7 @@ This document summarizes the personas and tooling agents that collaborate inside
 | Ben Graham | Deep value with margin of safety | Balance-sheet health, undervaluation thresholds |
 | Bill Ackman | Activist catalyst hunts | Turnaround potential, management actions |
 | Cathie Wood | Innovation-led growth | Disruption thesis, market expansion forecasts |
-| Charlie Munger | Quality franchises | Moat durability, management quality |
+| Charlie Munger | Rational thinker focused on quality franchises | Moat durability, management quality |
 | Michael Burry | Contrarian deep value | Hidden risks, asymmetric bets |
 | Mohnish Pabrai | Low-risk doubles | Downside protection, upside catalysts |
 | Peter Lynch | Everyday ten-baggers | Consumer trends, scalable narratives |
@@ -19,16 +19,7 @@ This document summarizes the personas and tooling agents that collaborate inside
 | Stanley Druckenmiller | Macro opportunities | Liquidity cycles, global growth regimes |
 | Warren Buffett | Wonderful companies at fair prices | Return on capital, durable cash flows |
 
-## Core System Agents
-
-- **Valuation Agent** – Consolidates analyst valuation metrics and builds intrinsic value ranges used by downstream nodes.
-- **Sentiment Agent** – Aggregates news, social, and alternative data sentiment indicators.
-- **Fundamentals Agent** – Scrubs financial statements and factor models for company health checks.
-- **Technicals Agent** – Computes technical indicators and momentum signals from historical prices.
-- **Risk Manager (`src/agents/risk_manager.py`)** – Enforces position sizing, leverage, and drawdown policies; consumes analyst and tooling signals.
-- **Portfolio Manager (`src/agents/portfolio_manager.py`)** – Produces the simulated order book, combining investment theses with risk constraints.
-
-## Data & Tooling Interfaces
+## Tooling Analysts`r`n`r`n| Agent | Focus | Key Signals |`r`n|-------|-------|-------------|`r`n| Valuation Analyst | Intrinsic value specialist | Discounted cash flows, valuation bands, multiple alignment |`r`n| Sentiment Analyst | Market sentiment specialist | News flow, positioning, behavioral indicators |`r`n| Fundamentals Analyst | Financial statement specialist | Balance-sheet health, cash-flow trends, factor exposure |`r`n| Technical Analyst | Chart and momentum specialist | Trend structure, breakout confirmation, momentum strength |`r`n`r`n## System Orchestrators`r`n`r`n- **Risk Manager (`src/agents/risk_manager.py`)** - Enforces position sizing, leverage, and drawdown policies; consumes analyst and tooling signals.`r`n- **Portfolio Manager (`src/agents/portfolio_manager.py`)** - Produces the simulated order book, combining investment theses with risk constraints.`r`n`r`n## Data & Tooling Interfaces
 
 - **Data Fetchers (`src/data/`)** – Fetch price history, fundamentals, and alternative data from configured providers.
 - **LLM model registry (`src/llm/models.py`)** – Wrap OpenAI, Groq, Anthropic, DeepSeek, or local models exposed through Ollama.
@@ -51,6 +42,9 @@ When adding a new agent:
 4. Document the addition in docs/llm/HANDOFF.md and append to docs/llm/HISTORY.md.
 
 Keeping this reference updated ensures contributors understand how reasoning responsibilities are partitioned.
+
+
+
 
 
 

@@ -61,7 +61,7 @@ Supporting assets live under:
 
 - Public financial APIs (via configured providers)
 - LLM reasoning through configured models (OpenAI by default, local via Ollama optional)
-- Internal dataset caches persisted under `data/` (when implemented)
+- Internal dataset helpers live under `src/data/`; a separate cache directory will be introduced when persistent storage is needed
 
 ## Future Considerations
 
@@ -70,3 +70,4 @@ Supporting assets live under:
 - Formalize evaluation metrics for agent signal quality
 
 Keep docs/llm/HANDOFF.md current with ongoing initiatives and open questions.
+

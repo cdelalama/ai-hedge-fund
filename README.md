@@ -1,27 +1,29 @@
-# AI Hedge Fund
+﻿# AI Hedge Fund
 
 This is a proof of concept for an AI-powered hedge fund.  The goal of this project is to explore the use of AI to make trading decisions.  This project is for **educational** purposes only and is not intended for real trading or investment.
 
 This system employs several agents working together:
 
+Selectable analyst personas and specialists:
+
 1. Aswath Damodaran Agent - The Dean of Valuation, focuses on story, numbers, and disciplined valuation
 2. Ben Graham Agent - The godfather of value investing, only buys hidden gems with a margin of safety
 3. Bill Ackman Agent - An activist investor, takes bold positions and pushes for change
 4. Cathie Wood Agent - The queen of growth investing, believes in the power of innovation and disruption
-5. Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices
+5. Charlie Munger Agent - The Rational Thinker, focuses on quality franchises with disciplined decision-making
 6. Michael Burry Agent - The Big Short contrarian who hunts for deep value
-7. Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk
+7. Mohnish Pabrai Agent - The Dhandho investor seeking low-risk doubles
 8. Peter Lynch Agent - Practical investor who seeks "ten-baggers" in everyday businesses
-9. Phil Fisher Agent - Meticulous growth investor who uses deep "scuttlebutt" research 
+9. Phil Fisher Agent - Meticulous growth investor who uses deep "scuttlebutt" research
 10. Rakesh Jhunjhunwala Agent - The Big Bull of India
-11. Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential
-12. Warren Buffett Agent - The oracle of Omaha, seeks wonderful companies at a fair price
-13. Valuation Agent - Calculates the intrinsic value of a stock and generates trading signals
-14. Sentiment Agent - Analyzes market sentiment and generates trading signals
-15. Fundamentals Agent - Analyzes fundamental data and generates trading signals
-16. Technicals Agent - Analyzes technical indicators and generates trading signals
-17. Risk Manager - Calculates risk metrics and sets position limits
-18. Portfolio Manager - Makes final trading decisions and generates orders
+11. Stanley Druckenmiller Agent - Macro legend hunting asymmetric opportunities
+12. Warren Buffett Agent - The Oracle of Omaha, buys wonderful companies at fair prices
+13. Technical Analyst - Chart-pattern specialist interpreting price action and indicators
+14. Fundamentals Analyst - Financial-statement specialist checking business health
+15. Sentiment Analyst - Market sentiment specialist covering news and investor behavior
+16. Valuation Analyst - Company valuation specialist building fair value ranges
+
+The workflow automatically runs the Risk Manager (position sizing and leverage guardrails) and the Portfolio Manager (final order decision) after analyst aggregation.
 
 <img width="1042" alt="Screenshot 2025-03-22 at 6 19 07 PM" src="https://github.com/user-attachments/assets/cbae3dcf-b571-490d-b0ad-3f0f035ac0d4" />
 
@@ -165,3 +167,4 @@ If you have a feature request, please open an [issue](https://github.com/virattt
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
