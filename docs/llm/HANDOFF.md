@@ -11,10 +11,10 @@
 
 ## Status Summary
 
-- ✅ Documentation scaffold created (`LLM_START_HERE.md`, docs/, docs/llm/).
-- ✅ README updated with documentation map and repaired anchors/headings.
-- ⏳ Workflow-specific documentation still outstanding.
-- ⏳ Testing guidance for critical agents not yet documented.
+- DONE: Documentation scaffold created (`LLM_START_HERE.md`, docs/, docs/llm/).
+- DONE: README updated with documentation map and repaired anchors/headings.
+- TODO: Workflow-specific documentation still outstanding.
+- TODO: Testing guidance for critical agents not yet documented.
 
 ## Next Steps
 
@@ -32,4 +32,3 @@
 - Do we need Docker-specific docs for deploying the web app in production?
 
 Keep this handoff under two screens and update it at the end of every working session.
-

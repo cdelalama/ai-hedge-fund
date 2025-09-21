@@ -15,11 +15,11 @@ AI Hedge Fund is an experimentation environment that simulates how multiple inve
 
 The system is composed of coordinated agents managed through LangGraph workflows.
 
-- **Analyst agents (`src/agents/analysts/`)** gather perspectives such as value, growth, sentiment, and macro analysis. Each agent returns structured signals.
+- **Analyst agents (`src/agents/*.py`)** gather perspectives such as value, growth, sentiment, and macro analysis. Each persona lives in its own module and returns structured signals.
 - **Risk Manager (`src/agents/risk_manager.py`)** evaluates aggregated signals, applies guardrails, and sets allowable exposure.
 - **Portfolio Manager (`src/agents/portfolio_manager.py`)** consolidates signals and risk limits to output simulated orders.
 - **Data layer (`src/data/`)** provides utilities for fetching fundamentals, market data, and sentiment via configured APIs or cached files.
-- **LLM tooling (`src/llm/` and `src/tools/`)** wraps provider-specific clients and tools used during reasoning chains.
+- **LLM tooling (`src/llm/models.py` and `src/tools/api.py`)** centralizes provider integrations and helper utilities for reasoning chains.
 - **Graph state (`src/graph/`)** defines the shared `AgentState` exchanged between nodes and configures the LangGraph workflow topology.
 - **CLI interface (`src/cli/`)** parses user input, orchestrates runs, and exposes flags for reasoning visibility, model selection, and local LLM usage.
 - **Backtester (`src/backtester.py`)** replays the workflow on historical intervals, collecting performance metrics for analysis.
@@ -27,15 +27,15 @@ The system is composed of coordinated agents managed through LangGraph workflows
 
 Supporting assets live under:
 
-- `docker/` – container images and compose files for local or hosted deployments
-- `.github/` – CI configurations
-- `tests/` – unit and integration coverage for agents, data access, and workflows
+- `docker/` - container images and compose files for local or hosted deployments
+- `.github/` - CI configurations
+- `tests/` - unit and integration coverage for agents, data access, and workflows
 
 ## Runtime Modes
 
-1. **Command Line** – Primary engineering and automation interface. Uses Poetry-managed virtual environment and executes `src/main.py`.
-2. **Backtesting** – Invokes `src/backtester.py` to evaluate strategies retrospectively. Shares configuration with CLI.
-3. **Web Application** – Launches the FastAPI app in `app/` for interactive use. Requires the same environment variables and API keys as the CLI.
+1. **Command Line** - Primary engineering and automation interface. Uses Poetry-managed virtual environment and executes `src/main.py`.
+2. **Backtesting** - Invokes `src/backtester.py` to evaluate strategies retrospectively. Shares configuration with CLI.
+3. **Web Application** - Launches the FastAPI app in `app/` for interactive use. Requires the same environment variables and API keys as the CLI.
 
 ## Environment & Secrets
 
@@ -48,13 +48,13 @@ Supporting assets live under:
 
 ```
 .
-├── app/                  # Web application backend/frontend
-├── docker/               # Container and deployment assets
-├── src/                  # Core workflow, agents, data utilities
-├── tests/                # Automated test suites
-├── README.md             # High-level project overview and quickstart
-├── LLM_START_HERE.md     # Operational entry point for LLM contributors
-└── docs/                 # Extended documentation and hand-off notes
+|-- app/                  # Web application backend/frontend
+|-- docker/               # Container and deployment assets
+|-- src/                  # Core workflow, agents, data utilities
+|-- tests/                # Automated test suites
+|-- README.md             # High-level project overview and quickstart
+|-- LLM_START_HERE.md     # Operational entry point for LLM contributors
+`-- docs/                 # Extended documentation and hand-off notes
 ```
 
 ## Knowledge Sources
@@ -70,4 +70,3 @@ Supporting assets live under:
 - Formalize evaluation metrics for agent signal quality
 
 Keep docs/llm/HANDOFF.md current with ongoing initiatives and open questions.
-

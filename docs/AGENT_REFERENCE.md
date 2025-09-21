@@ -1,6 +1,6 @@
 ﻿# Agent Reference
 
-This document summarizes the personas and tooling agents that collaborate inside the AI Hedge Fund workflow. Use it to understand each node''s responsibilities and expected outputs.
+This document summarizes the personas and tooling agents that collaborate inside the AI Hedge Fund workflow. Use it to understand each node's responsibilities and expected outputs.
 
 ## Analyst Personas
 
@@ -25,13 +25,13 @@ This document summarizes the personas and tooling agents that collaborate inside
 - **Sentiment Agent** – Aggregates news, social, and alternative data sentiment indicators.
 - **Fundamentals Agent** – Scrubs financial statements and factor models for company health checks.
 - **Technicals Agent** – Computes technical indicators and momentum signals from historical prices.
-- **Risk Manager** – Enforces position sizing, leverage, and drawdown policies; consumes analyst and tooling signals.
-- **Portfolio Manager** – Produces the simulated order book, combining investment theses with risk constraints.
+- **Risk Manager (`src/agents/risk_manager.py`)** – Enforces position sizing, leverage, and drawdown policies; consumes analyst and tooling signals.
+- **Portfolio Manager (`src/agents/portfolio_manager.py`)** – Produces the simulated order book, combining investment theses with risk constraints.
 
 ## Data & Tooling Interfaces
 
 - **Data Fetchers (`src/data/`)** – Fetch price history, fundamentals, and alternative data from configured providers.
-- **LLM Providers (`src/llm/providers/`)** – Wrap OpenAI, Groq, Anthropic, DeepSeek, or local models exposed through Ollama.
+- **LLM model registry (`src/llm/models.py`)** – Wrap OpenAI, Groq, Anthropic, DeepSeek, or local models exposed through Ollama.
 - **Tool Registry (`src/tools/`)** – Houses helper utilities (calculators, vector searches, etc.) that agents can call during reasoning.
 
 ## Workflow Expectations
@@ -51,4 +51,7 @@ When adding a new agent:
 4. Document the addition in docs/llm/HANDOFF.md and append to docs/llm/HISTORY.md.
 
 Keeping this reference updated ensures contributors understand how reasoning responsibilities are partitioned.
+
+
+
 
