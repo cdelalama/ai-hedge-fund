@@ -27,6 +27,14 @@ This system employs several agents working together:
 
 Note: the system does not actually make any trades.
 
+## Documentation Map
+- `LLM_START_HERE.md`: entry point for repository rules and workflows (read first)
+- `docs/PROJECT_CONTEXT.md`: architecture overview and repository layout
+- `docs/VERSIONING_RULES.md`: semantic versioning policy and release checklist
+- `docs/AGENT_REFERENCE.md`: detailed roles for analyst and system agents
+- `docs/llm/HANDOFF.md`: current focus, next steps, and open questions
+- `docs/llm/HISTORY.md`: chronological log of session updates
+
 [![Twitter Follow](https://img.shields.io/twitter/follow/virattt?style=social)](https://twitter.com/virattt)
 
 ## Disclaimer
@@ -42,10 +50,11 @@ This project is for **educational and research purposes only**.
 By using this software, you agree to use it solely for learning purposes.
 
 ## Table of Contents
+- [Documentation Map](#documentation-map)
 - [How to Install](#how-to-install)
 - [How to Run](#how-to-run)
-  - [⌨️ Command Line Interface](#️-command-line-interface)
-  - [🖥️ Web Application](#️-web-application)
+  - [Command Line Interface](#command-line-interface)
+  - [Web Application](#web-application)
 - [How to Contribute](#how-to-contribute)
 - [Feature Requests](#feature-requests)
 - [License](#license)
@@ -84,7 +93,7 @@ FINANCIAL_DATASETS_API_KEY=your-financial-datasets-api-key
 
 ## How to Run
 
-### ⌨️ Command Line Interface
+### Command Line Interface
 
 You can run the AI Hedge Fund directly via terminal. This approach offers more granular control and is useful for automation, scripting, and integration purposes.
 
@@ -130,13 +139,13 @@ poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA
 
 Note: The `--ollama`, `--start-date`, and `--end-date` flags work for the backtester, as well!
 
-### 🖥️ Web Application
+### Web Application
 
 The new way to run the AI Hedge Fund is through our web application that provides a user-friendly interface. This is recommended for users who prefer visual interfaces over command line tools.
 
 Please see detailed instructions on how to install and run the web application [here](https://github.com/virattt/ai-hedge-fund/tree/main/app).
 
-<img width="1721" alt="Screenshot 2025-06-28 at 6 41 03 PM" src="https://github.com/user-attachments/assets/b95ab696-c9f4-416c-9ad1-51feb1f5374b" />
+<img width="1721" alt="Screenshot 2025-06-28 at 6 41 03 PM" src="https://github.com/user-attachments/assets/b95ab696-c9f4-416c-9ad1-51feb1f5374b" />
 
 
 ## How to Contribute
